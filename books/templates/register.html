@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>REGISTER</h1>
+</head>
+<body class="port grad">
+    {%for m in messages%}
+    {{m}}
+    {%endfor%}
+
+    <div class="container">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type="submit">register</button>
+        </form>
+    </div>
+    
+    Already user? <a href="{%url 'signin'%}">Login</a>
+
+</body>
+</html>

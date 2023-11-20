@@ -1,0 +1,8 @@
+orm query for update objects
+Employees.objects.filter(id=2).update(contact="new contact",age=32)
+
+.orm query for delete
+Employees.objects.filter(id=1).delete()
+
+.orm query for all salary in acsndng order
+qs=Employees.objects.all().order_by("salary") 
